@@ -1,0 +1,213 @@
+.item-info {
+  width: 100%;
+  min-height: 100vh;
+  background: #eddaca;
+  padding-top: 100px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    width: 90%;
+    background: white;
+    position: relative;
+    border: 2px solid #9c9090;
+    box-shadow: 0 0 7px 2px #9c9090;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 50;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__card {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 30px;
+    width: 100%;
+    &-img {
+      flex: 0 0 30%;
+      position: relative;
+      &::before {
+        content: '';
+        width: 3px;
+        height: 100%;
+        background: #eddaca;
+        top: -15px;
+        right: 0;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+    &-content {
+      width: 100%;
+      width: 730px;
+      flex: 1 0 70%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'DynaPuff', cursive;
+      &-title {
+        font-size: 26px;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      &-price {
+        font-size: 22px;
+        margin-bottom: 30px;
+        & span {
+          font-size: 20px;
+          font-weight: 900;
+          color: black;
+        }
+      }
+      &-description {
+        font-size: 22px;
+        margin-bottom: 20px;
+        & span {
+          font-size: 20px;
+          display: block;
+          font-weight: 900;
+          color: black;
+          margin-bottom: 10px;
+        }
+      }
+      &-btn {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.card__tabs {
+  &-nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    & button {
+      padding: 0;
+      transition: color 0.2s linear;
+      &:hover {
+        color: #dfbb9e;
+      }
+    }
+  }
+  &-item {
+    min-height: 125px;
+  }
+  &-disc {
+    margin-right: 15px;
+    background: inherit;
+    font-family: 'DynaPuff', cursive;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.6;
+  }
+  &-disc-action {
+    opacity: 1;
+    text-decoration: underline;
+    color: #dfbb9e;
+  }
+  &-content {
+    display: none;
+  }
+  &-content-active {
+    display: block;
+    line-height: 24px;
+    font-size: 18px;
+  }
+}
+
+.slider-male {
+  max-width: 350px;
+  position: relative;
+  height: 400px;
+  padding: 0 15px;
+  overflow: hidden;
+  &__container {
+    border-radius: 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  &__mini {
+    max-width: 60px;
+    max-height: 80px;
+    border-radius: 10px;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}
+.slick-track {
+  display: flex;
+}
+
+.slick-dots {
+  width: 100px;
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 1044px) {
+    top: 30px;
+    right: -100px;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+  & li {
+    width: 80px;
+    padding: 5px;
+    height: auto;
+    opacity: 0.7;
+    @media screen and (max-width: 1044px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+    }
+  }
+  & li.slick-active {
+    border: 1px solid rgb(156, 137, 137);
+    border-radius: 10px;
+    opacity: 1;
+  }
+}
+.custom-indicator {
+  display: flex !important;
+}
+
+.slick-prev {
+  display: none !important;
+  @media screen and (max-width: 1044px) {
+    left: 5px;
+    z-index: 5;
+    display: block;
+  }
+}
+.slick-next {
+  display: none !important;
+  @media screen and (max-width: 1044px) {
+    right: 20px;
+    z-index: 5;
+    display: block;
+  }
+}

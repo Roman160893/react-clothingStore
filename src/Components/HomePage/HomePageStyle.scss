@@ -1,0 +1,110 @@
+.home {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+
+  & .home-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 165px 10px 0px 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    @media screen and (max-width: 845px) {
+      align-items: center;
+      padding: 20px 10px 0px 10px;
+      max-width: auto;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 165px 10px 0px 10px;
+      align-items: center;
+    }
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &-title {
+      font-size: 50px;
+      font-family: 'Kalam', cursive;
+      line-height: 40px;
+      color: rgb(74, 56, 33);
+      letter-spacing: 1.5px;
+      line-height: 120%;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 5;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 440px;
+        height: 164px;
+        border: 2px solid;
+        top: -20%;
+        left: -30%;
+        border-radius: 70%;
+        transform: rotateZ(150deg);
+        color: #c99517;
+        z-index: -1;
+        @media screen and (max-width: 845px) {
+          width: 300px;
+          height: 60px;
+          top: 10%;
+          left: -20%;
+        }
+      }
+      & p {
+        margin: 15px 10px;
+      }
+      @media screen and (max-width: 845px) {
+        font-size: 35px;
+        color: rgb(187, 79, 20);
+        line-height: 30px;
+      }
+    }
+    &-btn {
+      font-family: 'DynaPuff', cursive;
+      margin: 15px 10px;
+      font-size: 22px;
+      display: flex;
+      border-bottom: 2px solid #c99517;
+      position: relative;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      cursor: pointer;
+      & a {
+        color: inherit;
+        text-decoration: none;
+      }
+      & i {
+        font-size: 24px;
+        animation: arrow 0.8s infinite;
+        color: #c99517;
+        @keyframes arrow {
+          0% {
+            transform: translateX(-10px);
+          }
+          50% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(-10px);
+          }
+        }
+      }
+    }
+  }
+}

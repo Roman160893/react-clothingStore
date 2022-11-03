@@ -1,0 +1,28 @@
+.button {
+  padding: 5px;
+  margin: 10px 0;
+  font-family: 'DynaPuff', cursive;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  &-outline {
+    background: inherit;
+    border: 2px solid #dec5b2;
+    &:hover {
+      background: #dec5b2;
+    }
+  }
+  &-primary {
+    border: 2px solid #dec5b2;
+    background: #dec5b2;
+    &:hover {
+      background: inherit;
+      border: 2px solid #dec5b2;
+    }
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
