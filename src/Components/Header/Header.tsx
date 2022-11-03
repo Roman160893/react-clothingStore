@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="header__wrapper">
           <div className="header__wrapper-logo">
-            <NavLink to="/" onClick={onClickResetSet}>
+            <NavLink to="/react-clothingStore" onClick={onClickResetSet}>
               Clothing
             </NavLink>
           </div>
