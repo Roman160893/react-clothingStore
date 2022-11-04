@@ -7,7 +7,7 @@
   border-radius: 5px;
   &__category {
     display: flex;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     cursor: pointer;
     & span {
@@ -19,7 +19,7 @@
   }
   &__content {
     display: flex;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     flex: 0 1 80%;
     @media screen and (max-width: 1260px) {

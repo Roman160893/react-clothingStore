@@ -66,7 +66,7 @@
       flex: 1 1 70%;
       display: flex;
       flex-direction: column;
-      font-family: 'DynaPuff', cursive;
+      font-family: 'Ubuntu', sans-serif;
       &-title {
         font-size: 26px;
         text-align: center;
@@ -121,7 +121,7 @@
   &-disc {
     margin-right: 15px;
     background: inherit;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Ubuntu', sans-serif;
     border: none;
     cursor: pointer;
     font-size: 20px;
