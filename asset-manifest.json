@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-clothingStore/static/css/main.afa53e41.css",
-    "main.js": "/react-clothingStore/static/js/main.d6b149ea.js",
+    "main.css": "/react-clothingStore/static/css/main.b45422a3.css",
+    "main.js": "/react-clothingStore/static/js/main.fb539534.js",
     "static/media/bg.png": "/react-clothingStore/static/media/bg.48f643591bc85c98d3aa.png",
     "static/media/empty-cart.png": "/react-clothingStore/static/media/empty-cart.db905d1f4b063162f25b.png",
     "static/media/jacket.svg": "/react-clothingStore/static/media/jacket.f12a04f9bc621cbad06b9356c19914d1.svg",
@@ -10,11 +10,11 @@
     "static/media/t-shirt.svg": "/react-clothingStore/static/media/t-shirt.6252cc6ca4b8ebbb27b7fe09e1700e18.svg",
     "static/media/jeans.svg": "/react-clothingStore/static/media/jeans.8eb32ee1854fa1a54096f40ea04675c7.svg",
     "index.html": "/react-clothingStore/index.html",
-    "main.afa53e41.css.map": "/react-clothingStore/static/css/main.afa53e41.css.map",
-    "main.d6b149ea.js.map": "/react-clothingStore/static/js/main.d6b149ea.js.map"
+    "main.b45422a3.css.map": "/react-clothingStore/static/css/main.b45422a3.css.map",
+    "main.fb539534.js.map": "/react-clothingStore/static/js/main.fb539534.js.map"
   },
   "entrypoints": [
-    "static/css/main.afa53e41.css",
-    "static/js/main.d6b149ea.js"
+    "static/css/main.b45422a3.css",
+    "static/js/main.fb539534.js"
   ]
 }
