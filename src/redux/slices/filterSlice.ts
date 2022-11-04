@@ -2,14 +2,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface FilterSlice {
   category: number | null;
-  categoryName: string;
   type: number | null;
+  categoryName: string[];
 }
 
 const initialState: FilterSlice = {
   category: null,
   type: null,
-  categoryName: '',
+  categoryName: ['Всі товари', 'Для чоловіків', 'Для жінок'],
 };
 
 export const filterSlice = createSlice({
@@ -19,15 +19,12 @@ export const filterSlice = createSlice({
     setCategory: (state, action: PayloadAction<number | null>) => {
       state.category = action.payload;
     },
-    setName: (state, action) => {
-      state.categoryName = action.payload;
-    },
     setType: (state, action: PayloadAction<number | null>) => {
       state.type = action.payload;
     },
   },
 });
 
-export const { setCategory, setName, setType } = filterSlice.actions;
+export const { setCategory, setType } = filterSlice.actions;
 
 export default filterSlice.reducer;

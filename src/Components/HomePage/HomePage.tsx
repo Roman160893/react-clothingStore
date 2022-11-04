@@ -20,9 +20,9 @@ const HomePage: React.FC = () => {
       <div className="container">
         <div className="home__content">
           <div className="home__content-title">
-            <p>Нова коллекція</p>
-            <p>Нові ідеї </p>
-            <p>Нові емоції</p>
+            <p>Нова коллекцiя</p>
+            <p>Новi iдеї </p>
+            <p>Новi емоцiї</p>
           </div>
           <Link to="/clothing" onClick={onChangeCategory}>
             <div className="home__content-btn">

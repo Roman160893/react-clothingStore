@@ -1,0 +1,50 @@
+.burger {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  background: #e8d5ce;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.2s linear;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &.burger-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    height: 100vh;
+  }
+  & ul {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    & li {
+      display: flex;
+      justify-content: center;
+      font-size: 26px;
+      border: 1px solid;
+      padding: 10px 40px;
+      width: 210px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 7px 2px #9c9090;
+    }
+  }
+  & button {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 800;
+  }
+}

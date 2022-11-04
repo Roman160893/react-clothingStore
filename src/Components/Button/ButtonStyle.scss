@@ -25,4 +25,8 @@
   &:active {
     transform: translateY(1px);
   }
+  & button {
+    width: 100%;
+    background: #000;
+  }
 }

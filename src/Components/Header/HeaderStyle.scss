@@ -89,6 +89,10 @@
         }
       }
     }
+    &-btn {
+      display: flex;
+      align-items: center;
+    }
     &-login {
       font-family: 'DynaPuff', cursive;
       font-size: 16px;
