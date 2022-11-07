@@ -7,6 +7,7 @@
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.2s linear;
+
   &-outline {
     background: inherit;
     border: 2px solid #dec5b2;
@@ -14,6 +15,7 @@
       background: #dec5b2;
     }
   }
+
   &-primary {
     border: 2px solid #dec5b2;
     background: #dec5b2;
@@ -22,9 +24,11 @@
       border: 2px solid #dec5b2;
     }
   }
+
   &:active {
     transform: translateY(1px);
   }
+
   & button {
     width: 100%;
     background: #000;

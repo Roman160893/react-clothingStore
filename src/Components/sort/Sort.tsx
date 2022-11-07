@@ -1,16 +1,17 @@
-import React from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 
-import pants from '../../../assets/img/pants.svg';
-import jacket from '../../../assets/img/jacket.svg';
-import jeans from '../../../assets/img/jeans.svg';
-import shirt from '../../../assets/img/shirt.svg';
-import tshirt from '../../../assets/img/t-shirt.svg';
-import { RootState } from '../../../redux/store';
-import { setType } from '../../../redux/slices/filterSlice';
+import pants from '../../assets/img/pants.svg';
+import jacket from '../../assets/img/jacket.svg';
+import jeans from '../../assets/img/jeans.svg';
+import shirt from '../../assets/img/shirt.svg';
+import tshirt from '../../assets/img/t-shirt.svg';
+import { RootState } from '../../redux/store';
+import { setType } from '../../redux/slices/filterSlice';
 
 import './SortStyle.scss';
+
 type SortItem = {
   name: string;
   img: any;
@@ -26,12 +27,12 @@ const sort: SortItem[] = [
   { name: 'Аксесуари', img: 'https://img.icons8.com/windows/32/null/red-purse.png' },
 ];
 
-const Sort: React.FC = () => {
-  const [openPopup, setOpenPopup] = React.useState<boolean>(false);
+const Sort: FC = () => {
+  const [openPopup, setOpenPopup] = useState<boolean>(false);
 
   const dispatch = useDispatch();
   const { categoryName, type, category } = useSelector((state: RootState) => state.filter);
-  const sortRef = React.useRef(null);
+  const sortRef = useRef(null);
 
   const onClickSelectType = (index: number) => {
     dispatch(setType(index));
@@ -49,11 +50,10 @@ const Sort: React.FC = () => {
   const handleOutsideClick = (e: any) => {
     if (!e.path.includes(sortRef.current)) {
       setOpenPopup(false);
-      console.log('asdsad');
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick);
     return () => {
       document.body.removeEventListener('click', handleOutsideClick);

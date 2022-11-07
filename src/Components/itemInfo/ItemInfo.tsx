@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
-import { RootState } from '../../../redux/store';
-import Button from '../../Button/Button';
-import './ItemInfo.scss';
-import { getImg } from '../../../assets/function';
-import { addProduct, CartItem } from '../../../redux/slices/cartSlice';
 
-const ItemInfo: React.FC = () => {
+import Button from '../button/Button';
+import { RootState } from '../../redux/store';
+import { getImg } from '../../assets/function';
+import { addProduct, CartItem } from '../../redux/slices/cartSlice';
+import './ItemInfo.scss';
+
+const ItemInfo: FC = () => {
   const [toggleState, setToggleState] = useState<number>(1);
 
   const id = Number(useParams().id);
   const { items } = useSelector((state: RootState) => state.clothing);
   const dispatch = useDispatch();
 
-  function toggleTab(index: number) {
+  const toggleTab = (index: number) => {
     setToggleState(index);
-  }
+  };
 
   const item = items.filter((obj) => obj.id === id);
 

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-
-import './HomePageStyle.scss';
-import bg from '../../assets/img/bg.png';
 import { useDispatch } from 'react-redux';
-import { setCategory, setType } from '../../redux/slices/filterSlice';
+
 import { windowScroll } from '../../assets/function';
+import bg from '../../assets/img/bg.png';
+import './HomePageStyle.scss';
+import { setCategory, setType } from '../../redux/slices/filterSlice';
 
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();

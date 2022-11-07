@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { setCategory, setType } from '../../redux/slices/filterSlice';
 import { RootState } from '../../redux/store';
 import { windowScroll } from '../../assets/function';
-import BurgerMenu from './BurgerMenu/BurgerMenu';
+import BurgerMenu from '../../Components/burgerMenu/BurgerMenu';
 import './HeaderStyle.scss';
 
 const Header: React.FC = () => {

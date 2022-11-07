@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import './ClothingStyle.scss';
-
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from '../../redux/store';
-import Item from './Item/Item';
-import Loader from '../Loader/Loader';
+
 import { fetchClothing } from '../../redux/slices/clothingSlice';
-import Sort from './Sort/Sort';
+import Sort from '../../Components/sort/Sort';
+import Loader from '../../Components/loader/Loader';
+import Item from '../../Components/item/Item';
+import './ClothingPageStyle.scss';
 
 const Clothing: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -33,7 +33,7 @@ const Clothing: React.FC = () => {
                 ? [...new Array(8)].map((_, index) => <Loader key={index} />)
                 : items
                     ?.filter((obj) => (type === null ? obj : obj.type === type))
-                    .map((obj, index) => <Item key={obj.id} {...obj}></Item>)}
+                    .map((obj) => <Item key={obj.id} {...obj}></Item>)}
             </>
           )}
         </div>

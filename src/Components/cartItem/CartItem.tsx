@@ -1,27 +1,31 @@
-import React from 'react';
+import { FC } from 'react';
 import { useDispatch } from 'react-redux';
+
 import {
   CartItem as CartProps,
   minusProduct,
   plusProduct,
   removeProduct,
-} from '../../../redux/slices/cartSlice';
-import Button from '../../Button/Button';
+} from '../../redux/slices/cartSlice';
+import Button from '../button/Button';
 
-const CartItem: React.FC<CartProps> = ({ img, count, price, newprice, description, id }) => {
+const CartItem: FC<CartProps> = ({ img, count, price, newprice, description, id }) => {
   const dispatch = useDispatch();
 
   const onClickPlus = () => {
     dispatch(plusProduct(id));
   };
+
   const onClickMinus = () => {
     dispatch(minusProduct(id));
   };
+
   const deleteProduct = () => {
     if (window.confirm('Ви дійсно хочете видалити товар із корзини?')) {
       dispatch(removeProduct(id));
     }
   };
+
   return (
     <div className="cart__item">
       <div className="cart__item-img">

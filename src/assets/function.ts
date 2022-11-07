@@ -16,7 +16,7 @@ export const windowScroll = () => {
   return window.scrollTo(0, 0);
 };
 
-export function getImg(arr: ClothingItems[]) {
+export const getImg = (arr: ClothingItems[]) => {
   const img: string[] = [];
   // eslint-disable-next-line array-callback-return
   arr.map((obj) => {
@@ -32,4 +32,4 @@ export function getImg(arr: ClothingItems[]) {
     }
   });
   return img;
-}
+};

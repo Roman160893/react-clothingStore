@@ -3,6 +3,7 @@
   min-height: 100vh;
   background: #eddaca;
   padding-top: 100px;
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -24,15 +25,18 @@
       width: 100%;
     }
   }
+
   &__back {
     position: absolute;
     top: 0;
     left: 10px;
     z-index: 50;
   }
+
   &__content {
     width: 100%;
   }
+
   &__card {
     display: flex;
     justify-content: space-around;
@@ -43,6 +47,7 @@
       justify-content: center;
       align-items: center;
     }
+
     &-img {
       flex: 0 0 30%;
       position: relative;
@@ -60,6 +65,7 @@
         }
       }
     }
+
     &-content {
       width: 100%;
       max-width: 730px;
@@ -67,12 +73,14 @@
       display: flex;
       flex-direction: column;
       font-family: 'Ubuntu', sans-serif;
+
       &-title {
         font-size: 26px;
         text-align: center;
         font-weight: 800;
         margin-bottom: 20px;
       }
+
       &-price {
         font-size: 22px;
         margin-bottom: 30px;
@@ -82,6 +90,7 @@
           color: black;
         }
       }
+
       &-description {
         font-size: 22px;
         margin-bottom: 20px;
@@ -93,6 +102,7 @@
           margin-bottom: 10px;
         }
       }
+
       &-btn {
         margin-bottom: 30px;
       }
@@ -107,6 +117,7 @@
     align-items: center;
     margin-bottom: 15px;
     font-size: 20px;
+
     & button {
       padding: 0;
       transition: color 0.2s linear;
@@ -115,9 +126,11 @@
       }
     }
   }
+
   &-item {
     min-height: 125px;
   }
+
   &-disc {
     margin-right: 15px;
     background: inherit;
@@ -127,14 +140,17 @@
     font-size: 20px;
     opacity: 0.6;
   }
+
   &-disc-action {
     opacity: 1;
     text-decoration: underline;
     color: #dfbb9e;
   }
+
   &-content {
     display: none;
   }
+
   &-content-active {
     display: block;
     line-height: 24px;
@@ -152,6 +168,7 @@
     height: auto;
     margin-top: 15px;
   }
+
   &__container {
     border-radius: 10px;
     display: flex !important;
@@ -162,12 +179,14 @@
       max-width: 250px;
     }
   }
+
   &__img {
     max-width: 300px;
     max-height: 300px;
     margin: 0 auto;
     border-radius: 10px;
   }
+
   &__mini {
     max-width: 60px;
     max-height: 80px;
@@ -177,6 +196,7 @@
     }
   }
 }
+
 .slick-track {
   display: flex;
 }
@@ -214,6 +234,7 @@
     }
   }
 }
+
 .custom-indicator {
   display: flex !important;
 }
@@ -226,6 +247,7 @@
     display: block;
   }
 }
+
 .slick-next {
   display: none !important;
   @media screen and (max-width: 1044px) {

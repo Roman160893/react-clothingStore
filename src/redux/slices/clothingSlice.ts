@@ -32,10 +32,12 @@ const initialState: ClothingSlice = {
 export const fetchClothing = createAsyncThunk<ClothingItems[], number | null>(
   'clothing/fetchClothingStatus',
   async (category) => {
+    const params = new URLSearchParams();
+    params.append('category', category !== 0 ? `${category}` : '');
+
     const { data } = await axios.get<ClothingItems[]>(
-      `https://6358f339ff3d7bddb994bf3f.mockapi.io/items?${
-        category !== 0 ? `category=${category}` : ''
-      }`,
+      'https://6358f339ff3d7bddb994bf3f.mockapi.io/items',
+      { params },
     );
     return data;
   },
@@ -50,7 +52,6 @@ export const clothingSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(fetchClothing.pending, (state) => {
       state.status = 'loading';
       state.items = [];
